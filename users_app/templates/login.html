@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title>Log In - TaskMaster </title>
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        </br>
+        <h2 style="background-color:powderblue">Log In Yourself!
+        </br><small class="text-muted">Let's get started.</small></h2>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <form method="POST" class="mt-5 col-7">
+            {% csrf_token %}
+
+            {{ form|crispy }}
+
+            <button type="submit" class="btn btn-primary mb-5">Login</button>
+            
+        </form>
+            
+            <a href="{%url 'register' %}">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Register</button>
+            </a>
+            <p class= "mt-2">New User? </p>
+        
+    </div>
+{% endblock content %}

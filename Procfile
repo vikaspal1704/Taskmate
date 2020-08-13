@@ -1,1 +1,1 @@
-web: gunicorn taskmaster.wsgi
+web: gunicorn taskmaster.wsgi --log-file -

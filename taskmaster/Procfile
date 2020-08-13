@@ -1,1 +1,1 @@
-web:gunicorn taskmaster.wsgi
+web: gunicorn django_project.wsgi --log-file -

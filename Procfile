@@ -1,1 +1,1 @@
-web: gunicorn taskmaster.wsgi --timeout 15 --keep-alive 5 --log-level debug
+web: gunicorn taskmaster.wsgi:application --log-file - --log-level debug

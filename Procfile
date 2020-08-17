@@ -1,1 +1,1 @@
-web: gunicorn taskmaster.wsgi:application --log-file - --log-level debug
+web: gunicorn taskmaster.wsgi --log-file -

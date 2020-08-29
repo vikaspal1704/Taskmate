@@ -27,7 +27,7 @@
             <table class="table table-bordered" >
                 <thead class="thead-dark" >
                     <tr align=center class="row">
-                        <th class="col-4">Task</th>
+                        <th class="col-3">Task</th>
                         <th class="col-3">Done</th>
                         <th class="col-3">Edit</th>
                         <th class="col-3">Delete</th>
@@ -38,14 +38,14 @@
                     {% for obj in all_task %}
                         {% if obj.done %}
                             <tr align=center class="table-success row" >
-                                <td class="col-4"><del>{{ obj.task }}</del></td>
+                                <td class="col-3"><del>{{ obj.task }}</del></td>
                                 <td class="col-3" align=center><a href="{%url 'pending_task' obj.id %}"><button type="button" class="btn btn-warning">Mark as Pending</button></a></td>
                                 <td class="col-3" align=center><a href="{%url 'edit_task' obj.id %}"><button type="button" class="btn btn-outline-info">Edit</button></a></td>
                                 <td class="col-3" align=center><a href="{%url 'delete_task' obj.id %}"><button type="button" class="btn btn-outline-danger">Delete</button></a></td>
                             </tr>
                         {% else %}
                             <tr align=center class="row">
-                                <td class="col-4">{{ obj.task }}</td>
+                                <td class="col-3">{{ obj.task }}</td>
                                 <td class="col-3"><a href="{%url 'complete_task' obj.id %}"><button type="button" class="btn btn-success">Mark as Completed</button></a></td>
                                 <td class="col-3" align=center><a href="{%url 'edit_task' obj.id %}"><button type="button" class="btn btn-outline-info">Edit</button></a></td>
                                 <td class="col-3" align=center><a href="{%url 'delete_task' obj.id %}"><button type="button" class="btn btn-outline-danger">Delete</button></a></td>

@@ -46,7 +46,7 @@
                         {% else %}
                             <tr align=center class="row">
                                 <td class="col-3">{{ obj.task }}</td>
-                                <td class="col-3"><a href="{%url 'complete_task' obj.id %}"><button type="button" class="btn btn-success">Completed</button></a></td>
+                                <td class="col-3" align=center><a href="{%url 'complete_task' obj.id %}"><button type="button" class="btn btn-success">Completed</button></a></td>
                                 <td class="col-3" align=center><a href="{%url 'edit_task' obj.id %}"><button type="button" class="btn btn-outline-info">Edit</button></a></td>
                                 <td class="col-3" align=center><a href="{%url 'delete_task' obj.id %}"><button type="button" class="btn btn-outline-danger">Delete</button></a></td>
                             </tr>
